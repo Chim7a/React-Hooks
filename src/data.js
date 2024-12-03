@@ -3,7 +3,7 @@ const PetData = [
     pet_id: 3,
     pet_name: "Bella",
     pet_race: "Golden Retriever",
-    pet_location: "New York",
+    pet_location: "Lagos",
     pet_type: "female",
     pet_is_adopted: true,
     pet_photo:
@@ -13,7 +13,7 @@ const PetData = [
     pet_id: 4,
     pet_name: "Charlie",
     pet_race: "Bulldog",
-    pet_location: "Los Angeles",
+    pet_location: "Abuja",
     pet_type: "male",
     pet_is_adopted: false,
     pet_photo:
@@ -23,7 +23,7 @@ const PetData = [
     pet_id: 5,
     pet_name: "Luna",
     pet_race: "Beagle",
-    pet_location: "San Francisco",
+    pet_location: "Abuja",
     pet_type: "female",
     pet_is_adopted: true,
     pet_photo:
@@ -33,7 +33,7 @@ const PetData = [
     pet_id: 6,
     pet_name: "Max",
     pet_race: "Labrador Retriever",
-    pet_location: "Chicago",
+    pet_location: "Abuja",
     pet_type: "male",
     pet_is_adopted: true,
     pet_photo:
@@ -43,7 +43,7 @@ const PetData = [
     pet_id: 7,
     pet_name: "Molly",
     pet_race: "Poodle",
-    pet_location: "Austin",
+    pet_location: "Abuja",
     pet_type: "female",
     pet_is_adopted: false,
     pet_photo:
@@ -53,7 +53,7 @@ const PetData = [
     pet_id: 8,
     pet_name: "Rocky",
     pet_race: "Rottweiler",
-    pet_location: "Dallas",
+    pet_location: "Abuja",
     pet_type: "male",
     pet_is_adopted: true,
     pet_photo:
@@ -63,7 +63,7 @@ const PetData = [
     pet_id: 9,
     pet_name: "Sadie",
     pet_race: "Boxer",
-    pet_location: "Miami",
+    pet_location: "Lagos",
     pet_type: "female",
     pet_is_adopted: false,
     pet_photo:
@@ -73,7 +73,7 @@ const PetData = [
     pet_id: 10,
     pet_name: "Oscar",
     pet_race: "Chihuahua",
-    pet_location: "Seattle",
+    pet_location: "Lagos",
     pet_type: "male",
     pet_is_adopted: false,
     pet_photo:
@@ -83,7 +83,7 @@ const PetData = [
     pet_id: 11,
     pet_name: "Daisy",
     pet_race: "Shih Tzu",
-    pet_location: "Denver",
+    pet_location: "Lagos",
     pet_type: "female",
     pet_is_adopted: true,
     pet_photo:
@@ -93,7 +93,7 @@ const PetData = [
     pet_id: 12,
     pet_name: "Toby",
     pet_race: "Dachshund",
-    pet_location: "Boston",
+    pet_location: "Abuja",
     pet_type: "male",
     pet_is_adopted: false,
     pet_photo:
