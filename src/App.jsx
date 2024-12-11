@@ -6,6 +6,7 @@ import MainLayout from "./layouts/MainLayout";
 import ErrorPage from "./pages/ErrorPage";
 import Dashboard from "./pages/Dashboard";
 import AccountSettings from "./pages/Account-settings";
+import PetDetails from "./pages/PetDetails";
 
 function App() {
   return (
@@ -13,7 +14,11 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/marketplace" element={<MarketPlace />} />
+        <Route path="/marketplace">
+          <Route index element={<MarketPlace />} />
+          {/* example of dynamic routing */}
+          <Route path=":pet_id" element={<PetDetails />} />
+        </Route>
 
         {/* Examples of nested route */}
         <Route path="dashboard">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Tag, Button } from "antd";
+import { Link } from "react-router";
 const { Meta } = Card;
 
 const PetCard = (props) => {
@@ -41,6 +42,9 @@ const PetCard = (props) => {
             >
               Adopt pet
             </Button>
+            <Link to={`/marketplace/${props.id}`}>
+              <button>More details</button>
+            </Link>
           </div>
         }
       />
