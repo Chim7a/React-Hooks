@@ -8,6 +8,7 @@ function PetDetails() {
 
   const getPetDetails = () => {
     const pet = PetData.find((item) => item.pet_id === Number(params.pet_id));
+
     setPetInfo(pet);
   };
   useEffect(() => {

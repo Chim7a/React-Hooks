@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PetList from "../components/PetList";
 import PetData from "../data";
 import { Select } from "antd";
 import AddPet from "../components/AddPet";
+import { UserContext } from "../context/UserContextProvider";
 
 function MarketPlace() {
   const [petStore, setPetStore] = useState(PetData);
-
+  const { user } = useContext(UserContext);
   const handlePetLocationFilter = (value) => {
     switch (value) {
       case "Abuja":
@@ -123,6 +124,9 @@ function MarketPlace() {
         />
       </section>
       <div className="container mx-auto">
+        <h1>
+          Hi my name is {user.name} and i'm {user.age} years of age.
+        </h1>
         <AddPet handleAddNewPet={handleAddNewPet} />
       </div>
       <PetList petStoreProp={petStore} handlePetAdoption={handlePetAdoption} />

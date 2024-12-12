@@ -7,6 +7,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Dashboard from "./pages/Dashboard";
 import AccountSettings from "./pages/Account-settings";
 import PetDetails from "./pages/PetDetails";
+import ProtectedLayout from "./layouts/ProtectedLayout";
 
 function App() {
   return (
@@ -16,12 +17,12 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/marketplace">
           <Route index element={<MarketPlace />} />
-          {/* example of dynamic routing */}
+          {/* example of dynamic routing. It must also start with a column eg :pet_id */}
           <Route path=":pet_id" element={<PetDetails />} />
         </Route>
 
         {/* Examples of nested route */}
-        <Route path="dashboard">
+        <Route path="dashboard" element={<ProtectedLayout />}>
           <Route index element={<Dashboard />} />
           {/* this route is nested withing the dashboard */}
           <Route path="setting" element={<AccountSettings />} />
