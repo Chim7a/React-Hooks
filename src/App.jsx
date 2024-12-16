@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import AccountSettings from "./pages/Account-settings";
 import PetDetails from "./pages/PetDetails";
 import ProtectedLayout from "./layouts/ProtectedLayout";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="/marketplace">
           <Route index element={<MarketPlace />} />
           {/* example of dynamic routing. It must also start with a column eg :pet_id */}

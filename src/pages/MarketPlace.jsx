@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo } from "react";
 import PetList from "../components/PetList";
 import PetData from "../data";
 import { Select } from "antd";
@@ -8,11 +8,21 @@ import { UserContext } from "../context/UserContextProvider";
 function MarketPlace() {
   const [petStore, setPetStore] = useState(PetData);
   const { user } = useContext(UserContext);
+  const [AddPetDep, setAddPetDep] = useState(null);
+
+  // Usememo to store the value of the variable stored in Pestore.
+  // Added "AddPetDep" pet is stored as a dependency to allow for new pets to added to its original value.
+  // This is called inside the handleAddNewPet function
+  const petStorage = useMemo(() => {
+    return petStore;
+  }, [AddPetDep]);
+
+  // *****
   const handlePetLocationFilter = (value) => {
     switch (value) {
       case "Abuja":
         {
-          const dogsInAbuja = PetData.filter(
+          const dogsInAbuja = petStorage.filter(
             (item) => item.pet_location === value
           );
           setPetStore(dogsInAbuja);
@@ -21,7 +31,7 @@ function MarketPlace() {
         break;
       case "Lagos":
         {
-          const dogsInLagos = PetData.filter(
+          const dogsInLagos = petStorage.filter(
             (item) => item.pet_location === value
           );
           setPetStore(dogsInLagos);
@@ -29,7 +39,7 @@ function MarketPlace() {
         break;
 
       case "All": {
-        setPetStore(PetData);
+        setPetStore(petStorage);
       }
       default:
         break;
@@ -75,6 +85,8 @@ function MarketPlace() {
 
   const handleAddNewPet = (pet_info) => {
     // console.log("Recieved in App.jsx from AddPet", pet_info);
+    // When a new pet is added, it is then sent to the memo with setAddPetDep(pet_info);
+    setAddPetDep(pet_info);
     setPetStore([pet_info, ...petStore]);
   };
   return (

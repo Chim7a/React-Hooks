@@ -13,6 +13,7 @@ function Navbar() {
           <NavLink to={"/about-us"}>About-us</NavLink>
           <NavLink to={"/marketplace"}>Our-marketplace</NavLink>
           <NavLink to={"/dashboard"}>Dashboard</NavLink>
+          <NavLink to={"/contact"}>Contact</NavLink>
         </div>
       </div>
     </nav>
